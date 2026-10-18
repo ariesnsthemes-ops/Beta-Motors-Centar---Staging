@@ -1,4 +1,3 @@
-<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
 <title>Beta Motors Centar</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,7 +14,7 @@ img{display:block;max-width:100%}a{color:inherit;text-decoration:none}
 .wrap{max-width:1440px;margin:0 auto;padding-left:max(24px,env(safe-area-inset-left,0px));padding-right:max(24px,env(safe-area-inset-right,0px))}
 header{position:sticky;top:env(safe-area-inset-top,0px);z-index:100;background:color-mix(in oklch,var(--bg) 86%,transparent);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
 .bar{display:flex;align-items:center;justify-content:space-between;height:76px;gap:16px}
-.brand img{height:20px;width:auto;transition:transform .5s var(--ease)}.brand:hover img{transform:translateX(3px)}
+.brand img{height:15px;width:auto;transition:transform .5s var(--ease)}.brand:hover img{transform:translateX(3px)}
 nav ul{list-style:none;display:flex;gap:8px;align-items:center}
 nav button,nav a.plain{position:relative;font:500 15px/1 var(--body);color:var(--ink);background:none;border:0;padding:14px 12px;cursor:pointer;display:inline-flex;align-items:center;gap:6px}
 nav button::after,nav a.plain::after{content:"";position:absolute;left:12px;right:12px;bottom:6px;height:2px;background:var(--accent);transform:scaleX(0);transform-origin:left;}
@@ -33,43 +32,43 @@ nav :focus-visible,.marquee a:focus-visible{outline:2px solid var(--accent);outl
 .burger[aria-expanded=true] span{background:transparent}.burger[aria-expanded=true] span::before{top:0;transform:rotate(45deg)}.burger[aria-expanded=true] span::after{top:0;transform:rotate(-45deg)}
 
 :root{--surface:oklch(100% 0 0)}
-/* Suzuki brand page: photo on top, about left, sticky contact right */
-.crumb{font:500 13px/1 var(--body);color:var(--muted);display:flex;gap:10px;align-items:center;padding:20px 0}
-.crumb a:hover{color:var(--accent);text-decoration:underline;text-underline-offset:4px}
-.cover{position:relative;height:clamp(300px,52dvh,560px);overflow:hidden;background:var(--line)}
-.cover img{width:100%;height:100%;object-fit:cover;object-position:50% 58%;animation:zoom 2.4s var(--ease) both}
-@keyframes zoom{from{transform:scale(1.08);opacity:.4}}
-.title{padding:clamp(28px,4vw,56px) 0 clamp(20px,3vw,40px);display:flex;flex-direction:column;gap:16px}
+/* H: sticky stacking panels; each brand slides over the previous one */
+.hero .wrap{display:grid;grid-template-columns:1fr;gap:20px;align-items:end;padding-top:clamp(20px,3vw,40px);padding-bottom:clamp(28px,4vw,56px)}
+.hero-img{order:1}.hero-text{order:0;display:flex;flex-direction:column;gap:18px;align-items:flex-start}
+.hero-label{font:600 12px/1 var(--body);letter-spacing:.16em;text-transform:uppercase;color:var(--accent);display:flex;align-items:center;gap:12px}
+.hero-label::after{content:"";width:56px;height:1.5px;background:var(--accent)}
+.hero-logo img{width:clamp(170px,20vw,280px);height:auto}
+.hero-img img{width:100%;height:auto;mix-blend-mode:multiply;animation:fade 1s var(--ease) both}
+@keyframes fade{from{opacity:0}}
+@media(min-width:900px){.hero .wrap{grid-template-columns:8fr 4fr;min-height:min(76dvh,720px)}.hero-img{order:0}.hero-text{order:1;padding-bottom:clamp(16px,4vw,64px)}}
+.stack{border-top:1px solid var(--line)}
+.pn{position:relative;background:var(--bg);border-bottom:1px solid var(--line);display:grid;grid-template-columns:1fr}
+.pn .ph{position:relative;overflow:hidden;aspect-ratio:4/3;background:var(--line)}
+.pn .ph img{width:100%;height:100%;object-fit:cover;transition:transform 1.6s var(--ease)}
+.pn:hover .ph img{transform:scale(1.04)}
+.pn .tx{position:relative;display:flex;flex-direction:column;justify-content:center;gap:16px;padding:clamp(32px,5vw,56px) max(24px,env(safe-area-inset-left,0px)) clamp(40px,6vw,72px)}
 .eyebrow{display:flex;align-items:center;gap:12px;font:600 12px/1 var(--body);letter-spacing:.16em;text-transform:uppercase;color:var(--accent)}
-.eyebrow::after{content:"";width:40px;height:1.5px;background:currentColor}
-.title .wl{height:clamp(40px,5vw,64px);width:auto;max-width:200px;object-fit:contain;object-position:left center}
-.title h1{font:800 clamp(30px,3.6vw,52px)/1.02 var(--display);font-stretch:108%;letter-spacing:-.035em}
-.title h1 b{font-weight:900;color:var(--accent)}
-.page{display:grid;grid-template-columns:1fr;gap:40px;padding-bottom:clamp(56px,8vw,120px)}
-.about{border-top:1px solid var(--line);padding-top:clamp(24px,3vw,40px)}
-.about h2{font:600 12px/1 var(--body);letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:24px}
-.about p{font-size:clamp(15px,1.1vw,17px);line-height:1.75;max-width:none}
-.contact{background:var(--accent);color:var(--on-accent);padding:clamp(28px,3vw,44px);display:flex;flex-direction:column;gap:0;border-radius:16px}
-.contact h2{font:800 clamp(22px,2vw,28px)/1.1 var(--display);font-stretch:108%;letter-spacing:-.02em;margin-bottom:8px}
-.row{display:grid;gap:8px;padding:20px 0;border-top:1px solid color-mix(in oklch,var(--on-accent) 22%,transparent)}
-.row:first-of-type{margin-top:16px}
-.row dt{font:600 11px/1 var(--body);letter-spacing:.16em;text-transform:uppercase;color:oklch(80% .04 235)}
-.row dd{font:500 clamp(15px,1.1vw,17px)/1.5 var(--body)}
-.row a.big{font:500 clamp(15px,1.1vw,17px)/1.5 var(--body);letter-spacing:normal}
-.row a{background:linear-gradient(currentColor,currentColor) 0 100%/0 1.5px no-repeat;transition:background-size .5s var(--ease)}
-.row a:hover{background-size:100% 1.5px}
-.hrs{display:grid;grid-template-columns:auto 1fr;gap:6px 24px;font-variant-numeric:tabular-nums}.hrs span:nth-child(even){text-align:right}
-.btns{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:8px}
-.btn{display:flex;align-items:center;justify-content:center;height:52px;font:600 15px/1 var(--body);border:1px solid var(--on-accent);transition:background .3s var(--ease),color .3s,transform .2s}
-.btn.pri{background:var(--on-accent);color:var(--accent)}.btn.pri:hover{background:transparent;color:var(--on-accent)}
-.btn.sec:hover{background:var(--on-accent);color:var(--accent)}.btn:active{transform:translateY(1px)}
-.btn:focus-visible,.row a:focus-visible{outline:2px solid var(--on-accent);outline-offset:3px}
+.eyebrow::after{content:"";width:40px;height:1.5px;background:currentColor;transition:width .6s var(--ease)}
+.pn:hover .eyebrow::after{width:88px}
+.tx .wl{height:auto;max-height:46px;width:auto;max-width:150px;object-fit:contain;object-position:left center}
+.tx h2{color:#232323;font:800 clamp(26px,2.7vw,40px)/1.05 var(--display);font-stretch:108%;letter-spacing:-.03em}
+.tx h2 b{font-weight:900;color:var(--accent)}
+.tx p{font-size:clamp(15px,1.1vw,17px);line-height:1.75;color:var(--muted);max-width:56ch}
+.num{font:900 clamp(72px,10vw,160px)/.8 var(--display);font-stretch:112%;letter-spacing:-.05em;color:var(--line);margin-top:8px;user-select:none}
 @media(min-width:900px){
- body{padding-bottom:0} .page{grid-template-columns:7fr 4fr;column-gap:clamp(40px,7vw,120px);align-items:start}
- .contact{position:sticky;top:100px;margin-top:calc(-1 * clamp(20px,3vw,40px))}
+ .pn{grid-template-columns:7fr 5fr;min-height:min(calc(100dvh - 76px),860px)}
+ .pn:nth-child(even){grid-template-columns:5fr 7fr}.pn:nth-child(even) .ph{order:2}
+ .pn .ph{aspect-ratio:auto}
+ .pn .tx{padding-left:clamp(32px,5vw,88px);padding-right:max(24px,calc((100vw - 1440px)/2 + 24px))}
+ .pn:nth-child(even) .tx{padding-right:clamp(32px,5vw,88px);padding-left:max(24px,calc((100vw - 1440px)/2 + 24px))}
 }
-.has-dd.cur>button::after{display:none}
-.about-logo{display:block;height:clamp(40px,5vw,64px);width:auto;max-width:200px;object-fit:contain;object-position:left center;margin-bottom:24px}
+@media(min-width:900px) and (min-height:760px){
+ .pn{position:sticky;top:76px;scroll-margin-top:76px}
+}
+@supports(animation-timeline:view()){
+ @media(min-width:900px){.pn .ph img{animation:rise linear both;animation-timeline:view();animation-range:entry 0% entry 100%}}
+ @keyframes rise{from{transform:scale(1.18)}to{transform:scale(1)}}
+}
 /* footer: white */
 footer{padding:clamp(44px,5vw,72px) 0 32px;background:var(--accent);color:var(--on-accent)}
 .ft{display:grid;grid-template-columns:1fr;gap:28px}
@@ -126,10 +125,68 @@ nav button:hover::after,nav a.plain:hover::after,.has-dd.open>button::after{tran
 .dd a{grid-template-columns:1fr;padding:4px 14px;font:500 15px/1.3 var(--body);color:var(--ink)}
 .dd a:hover,.dd a:focus-visible,.dd a[aria-current]{background:none;padding:4px 14px;color:var(--accent)}
 .dd a:focus-visible{outline:2px solid var(--accent);outline-offset:-2px;border-radius:8px}
-@media(max-width:900px){.dd a,.dd a:hover,.dd a[aria-current]{padding:10px 0 10px 14px;font-size:16px}}
+@media(max-width:900px){.dd a,.dd a:hover,.dd a[aria-current]{padding:10px 0 10px 14px;font-size:15px}}
 /* dropdown underline */
 .dd a span{justify-self:start;padding-bottom:2px;border-bottom:1px solid transparent;transition:border-color .3s var(--ease)}
 .dd a:hover span,.dd a:focus-visible span{border-bottom-color:currentColor}
+/* header v3: transparent over hero, compact + sticky after scroll */
+html{scroll-padding-top:68px}
+header{position:fixed;top:0;left:0;right:0;background:transparent;backdrop-filter:none;-webkit-backdrop-filter:none;border-bottom:1px solid transparent;transition:background .4s var(--ease),border-color .4s,backdrop-filter .4s}
+.bar{height:92px;transition:height .45s var(--ease)}
+.brand img{transition:transform .5s var(--ease),height .45s var(--ease)}
+header.scrolled{background:color-mix(in oklch,var(--bg) 88%,transparent);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom-color:var(--line)}
+header.scrolled .bar{height:60px}
+header.scrolled .brand img{height:13px}
+#sent{position:absolute;top:0;left:0;width:1px;height:24px;pointer-events:none}
+.hero{padding-top:92px}
+@media(min-width:900px) and (min-height:760px){.pn{top:60px;scroll-margin-top:60px;min-height:min(calc(100dvh - 60px),860px)}}
+@media(max-width:900px){header:has(nav.open){background:var(--bg)}.bar{height:68px}header.scrolled .bar{height:56px}.hero{padding-top:68px}}
+/* timeline */
+.tl-sec{border-top:1px solid var(--line);padding:clamp(64px,9vw,140px) 0}
+.tl-sec .wrap{display:grid;grid-template-columns:1fr;gap:48px}
+.tl-head{display:flex;flex-direction:column;gap:18px}
+.tl-head .eyebrow{display:flex;align-items:center;gap:12px;font:600 12px/1 var(--body);letter-spacing:.16em;text-transform:uppercase;color:var(--accent)}
+.tl-head .eyebrow::after{content:"";width:40px;height:1.5px;background:currentColor}
+.tl-head h2{font:800 clamp(30px,3.4vw,48px)/1.02 var(--display);font-stretch:108%;letter-spacing:-.035em}
+.tl-head p{color:var(--muted);max-width:40ch;line-height:1.7}
+ol.tl{list-style:none;display:grid}
+.tl li{position:relative;display:grid;grid-template-columns:28px 1fr;grid-template-areas:"rail yr" "rail bd";column-gap:clamp(12px,2vw,28px);row-gap:6px}
+.tl .yr{grid-area:yr;font:900 clamp(22px,2.2vw,30px)/1 var(--display);font-stretch:112%;letter-spacing:-.03em;color:var(--line);transition:color .6s var(--ease);font-variant-numeric:tabular-nums}
+.tl .rail{grid-area:rail;position:relative}
+.tl .rail::before,.tl .rail::after{content:"";position:absolute;left:50%;margin-left:-.75px;top:20px;bottom:-1px;width:1.5px}
+.tl .rail::before{background:var(--line)}
+.tl .rail::after{background:var(--accent);transform:scaleY(0);transform-origin:top;transition:transform 1s var(--ease)}
+.tl li:last-child .rail::before,.tl li:last-child .rail::after{display:none}
+.tl .rail i{position:absolute;left:50%;top:5px;width:14px;height:14px;margin-left:-7px;border-radius:50%;background:var(--bg);border:1.5px solid var(--line);transition:background .5s var(--ease),border-color .5s,transform .6s var(--ease)}
+.tl .bd{grid-area:bd;display:flex;flex-direction:column;gap:10px;padding-bottom:clamp(36px,5vw,64px);opacity:.4;transition:opacity .7s var(--ease)}
+.tl .bd h3{font:700 clamp(18px,1.6vw,22px)/1.25 var(--display);font-stretch:106%;letter-spacing:-.015em}
+.tl .bd p{color:var(--muted);max-width:54ch;line-height:1.7}
+.tl li.on .yr{color:var(--accent)}.tl li.on .bd{opacity:1}
+.tl li.on .rail::after{transform:scaleY(1)}
+.tl li.on .rail i{background:var(--accent);border-color:var(--accent);transform:scale(1.15)}
+@media(min-width:900px){
+ .tl-sec .wrap{grid-template-columns:4fr 7fr;gap:clamp(40px,7vw,120px)}
+ .tl-head{position:sticky;top:120px;align-self:start}
+}
+@media(min-width:640px){.tl li{grid-template-columns:96px 28px 1fr;grid-template-areas:"yr rail bd"}.tl .yr{padding-top:1px}.tl .bd{padding-top:0}}
+.tl-nav{display:none}
+@media(min-width:900px){
+.tl-sec .wrap{grid-template-columns:1fr;gap:56px}
+.tl-head{position:static}
+ol.tl{display:flex;overflow-x:auto;overscroll-behavior-x:contain;padding:8px 4px 20px;scrollbar-width:none;cursor:grab}ol.tl::-webkit-scrollbar{display:none}ol.tl.drag{cursor:grabbing;scroll-behavior:auto!important;user-select:none;-webkit-user-select:none}ol.tl.drag li *{pointer-events:none}.tl-nav{display:flex;justify-content:flex-end;gap:12px;margin-top:-28px}.tl-nav button{width:46px;height:46px;border-radius:50%;border:1px solid var(--line);background:var(--surface);color:var(--ink);display:grid;place-items:center;cursor:pointer;transition:border-color .3s var(--ease),color .3s,transform .2s var(--ease),opacity .3s}.tl-nav button:hover{border-color:var(--accent);color:var(--accent)}.tl-nav button:active{transform:scale(.98)}.tl-nav button:disabled{opacity:.35;cursor:default;border-color:var(--line);color:var(--ink)}.tl-nav button:focus-visible{outline:2px solid var(--accent);outline-offset:3px}.tl-nav svg{width:18px;height:18px}
+.tl li{--gap:clamp(28px,3vw,48px);flex:0 0 clamp(230px,21vw,290px);grid-template-columns:1fr;grid-template-rows:auto 16px auto;align-content:start;grid-template-areas:"yr" "rail" "bd";row-gap:14px;padding:0 var(--gap) 0 0;}
+.tl li .bd{padding-bottom:0}
+.tl .yr{padding-top:0}
+.tl .rail{height:16px}
+.tl .rail::before,.tl .rail::after{top:50%;bottom:auto;left:8px;right:calc(-1*var(--gap));width:auto;height:1.5px;margin:-.75px 0 0}
+.tl .rail::after{transform:scaleX(0);transform-origin:left}
+.tl li:last-child .rail::before,.tl li:last-child .rail::after{display:none}
+.tl .rail i{top:50%;left:0;margin:-7px 0 0 0}
+.tl li.on .rail::after{transform:scaleX(1)}
+.tl .bd{padding-top:0}
+}
+@media(min-width:900px) and (prefers-reduced-motion:reduce){.tl li .rail::after{transform:scaleX(1)}}
+@media(prefers-reduced-motion:reduce){.tl .bd{opacity:1}.tl .yr{color:var(--accent)}.tl .rail::after{transform:scaleY(1)}}
 /* footer v2: quick links */
 .fq{display:flex;flex-direction:column;gap:26px}
 .fq h3{font:600 12px/1 var(--body);letter-spacing:.16em;text-transform:uppercase;color:oklch(80% .04 235);display:flex;align-items:center;gap:12px}
@@ -144,33 +201,49 @@ nav button:hover::after,nav a.plain:hover::after,.has-dd.open>button::after{tran
 .ft-copy{margin-top:clamp(48px,6vw,72px);padding-top:22px;border-top:1px solid oklch(100% 0 0/.14)}
 .ft-copy p{font:500 13px/1.4 var(--body);letter-spacing:.02em;color:oklch(80% .04 235)}
 .tx h2 b,.title h2 b,.title h1 b{color:#232323}.tx h2,.title h2,.title h1{color:#232323}
+/* timeline v2 */
+.tl .rail::after{display:none}
+.tl li{opacity:0;transform:translateY(18px);transition:opacity .9s var(--ease),transform .9s var(--ease);transition-delay:calc(var(--i,0)*110ms)}
+.tl li.on{opacity:1;transform:none}
+@media(min-width:900px){ol.tl{-webkit-mask-image:linear-gradient(90deg,#000 0,#000 calc(100% - 56px),transparent 100%);mask-image:linear-gradient(90deg,#000 0,#000 calc(100% - 56px),transparent 100%)}}
+@media(prefers-reduced-motion:reduce){.tl li{opacity:1;transform:none;transition:none}}
+@media(max-width:899px){.tl li,.tl li .bd{opacity:1;transform:none;transition:none}.tl li .yr{color:var(--accent)}.tl li .rail::after{transform:scaleY(1)}.tl li .rail i{background:var(--accent);border-color:var(--accent);transform:scale(1.15)}}
 .tx h2 b,.title h1 b,.title h2 b{font-weight:800}
-</style><header><div class="wrap bar">
-<a target="_blank" rel="noopener" class="brand" href="https://claude.ai/artifact/UpMQ9pMV4SUYrq4GaiHwUx" aria-label="Beta Motors Centar"><img src="assets/Beta_motors_centar_logo.svg" alt="Beta Motors Centar"></a>
+</style>
+<header><div class="wrap bar">
+<a class="brand" href="#top" aria-label="Beta Motors Centar"><img src="assets/Beta_motors_centar_logo.svg" alt="Beta Motors Centar"></a>
 <button class="burger" aria-label="Meni" aria-expanded="false" aria-controls="nav"><span></span></button>
-<nav id="nav" aria-label="Glavna navigacija"><ul><li class="has-dd cur"><button aria-haspopup="true" aria-expanded="false">Putnička vozila<svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 4.5 6 8l3.5-3.5"/></svg></button><div class="dd"><a target="_blank" rel="noopener" href="https://claude.ai/artifact/AKaC4LUxcYCrfftzC5DzHy" style="--i:0" aria-current="page"><span>Suzuki</span></a><a target="_blank" rel="noopener" href="https://claude.ai/artifact/UpMQ9pMV4SUYrq4GaiHwUx#subaru" style="--i:1"><span>Subaru</span></a></div></li><li class="has-dd"><button aria-haspopup="true" aria-expanded="false">Komercijalna vozila<svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 4.5 6 8l3.5-3.5"/></svg></button><div class="dd"><a target="_blank" rel="noopener" href="https://claude.ai/artifact/UpMQ9pMV4SUYrq4GaiHwUx#foton" style="--i:0"><span>Foton</span></a></div></li><li class="has-dd"><button aria-haspopup="true" aria-expanded="false">Kvadovi<svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 4.5 6 8l3.5-3.5"/></svg></button><div class="dd"><a target="_blank" rel="noopener" href="https://claude.ai/artifact/UpMQ9pMV4SUYrq4GaiHwUx#loncin" style="--i:0"><span>Loncin</span></a></div></li><li class="has-dd"><button aria-haspopup="true" aria-expanded="false">Motori<svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 4.5 6 8l3.5-3.5"/></svg></button><div class="dd"><a target="_blank" rel="noopener" href="https://claude.ai/artifact/UpMQ9pMV4SUYrq4GaiHwUx#voge" style="--i:0"><span>Voge</span></a></div></li><li class="has-dd"><button aria-haspopup="true" aria-expanded="false">Bicikli<svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 4.5 6 8l3.5-3.5"/></svg></button><div class="dd"><a target="_blank" rel="noopener" href="https://claude.ai/artifact/UpMQ9pMV4SUYrq4GaiHwUx#corelli" style="--i:0"><span>Corelli</span></a></div></li><li><a target="_blank" rel="noopener" class="plain" href="https://claude.ai/artifact/NnVMnFESgPuXyJsxCdUebw">Servis</a></li></ul></nav>
+<nav id="nav" aria-label="Glavna navigacija"><ul><li class="has-dd"><button aria-haspopup="true" aria-expanded="false">Putnička vozila<svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 4.5 6 8l3.5-3.5"/></svg></button><div class="dd"><a href="suzuki.html" style="--i:0"><span>Suzuki</span></a><a href="#subaru" style="--i:1"><span>Subaru</span></a></div></li><li class="has-dd"><button aria-haspopup="true" aria-expanded="false">Komercijalna vozila<svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 4.5 6 8l3.5-3.5"/></svg></button><div class="dd"><a href="#foton" style="--i:0"><span>Foton</span></a></div></li><li class="has-dd"><button aria-haspopup="true" aria-expanded="false">Kvadovi<svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 4.5 6 8l3.5-3.5"/></svg></button><div class="dd"><a href="#loncin" style="--i:0"><span>Loncin</span></a></div></li><li class="has-dd"><button aria-haspopup="true" aria-expanded="false">Motori<svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 4.5 6 8l3.5-3.5"/></svg></button><div class="dd"><a href="#voge" style="--i:0"><span>Voge</span></a></div></li><li class="has-dd"><button aria-haspopup="true" aria-expanded="false">Bicikli<svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 4.5 6 8l3.5-3.5"/></svg></button><div class="dd"><a href="#corelli" style="--i:0"><span>Corelli</span></a></div></li><li><a class="plain" href="servis.html">Servis</a></li></ul></nav>
 </div></header>
-<main id="top">
-<div class="wrap"><nav class="crumb" aria-label="Putanja"><a target="_blank" rel="noopener" href="https://claude.ai/artifact/UpMQ9pMV4SUYrq4GaiHwUx">Početna</a><span aria-hidden="true">/</span><a target="_blank" rel="noopener" href="https://claude.ai/artifact/UpMQ9pMV4SUYrq4GaiHwUx">Putnička vozila</a><span aria-hidden="true">/</span><span aria-current="page">Suzuki</span></nav></div>
-<div class="cover"><img src="assets/suzuki.webp" alt="SUZUKI" fetchpriority="high"></div>
-<div class="wrap">
-<div class="title"><h1><b>Suzuki</b> automobili</h1></div>
-<div class="page">
-<section class="about"><img class="about-logo" src="assets/suzuki-logo-bg.svg" alt="SUZUKI"><h2>O brendu</h2><p>Sa ponosom izdvojimo da smo već dve decenije ovlašćeni uvoznik Suzuki automobila. Pored prodaje vozila, našim kupcima pružamo i kompletnu servisnu podršku, sa mogućnošću ostvarivanja garancije do 10 godina ili 200.000 km, u skladu sa uslovima garancije. Dugogodišnja saradnja temelji se na kvalitetu vozila ovog renomiranog japanskog brenda, poznatog po praktičnim i ekonomičnim automobilima. Pored SUV modela kao što su S Cross i Vitara, u našoj ponudi možete pronaći i kompaktni gradski atomobil poput Swifta. Uz navedene modele, u ponudi je i Suzuki Vitara sa bogatim paketom električne opreme koji donosi dodatnu udobnost, praktičnost i jednostavnost u svakodnevnoj vožnji.</p></section>
-<aside class="contact" aria-label="Kontakt"><h2>Kontakt</h2>
-<dl>
-<div class="row"><dt>Adresa</dt><dd>Ulica i broj<br>Novi Sad</dd></div>
-<div class="row"><dt>Telefon</dt><dd><a class="big" href="tel:+381000000000">+381 XX XXX XXXX</a></dd></div>
-<div class="row"><dt>Radno vreme</dt><dd class="hrs"><span>Ponedeljak – Petak</span><span>XX:XX – XX:XX</span><span>Subota</span><span>XX:XX – XX:XX</span><span>Nedelja</span><span>Zatvoreno</span></dd></div>
-<div class="row"><dt>E-pošta</dt><dd><a href="mailto:ime@domen.rs">ime@domen.rs</a></dd></div>
-</dl>
-
-</aside>
-</div></div>
+<main id="top"><div id="sent"></div>
+<section class="hero" id="foton"><div class="wrap">
+<div class="hero-img"><img src="assets/foton-pickups.webp" alt="Foton" fetchpriority="high"></div>
+<div class="hero-text"><div class="hero-logo"><img src="assets/foton_logo.svg" alt="Foton"></div></div>
+</div></section>
+<section class="tl-sec" aria-labelledby="tl-h"><div class="wrap">
+<div class="tl-head"><span class="eyebrow">Vremenska linija</span><h2 id="tl-h">Naslov sekcije</h2><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></div>
+<ol class="tl">
+<li><span class="yr">2006</span><span class="rail" aria-hidden="true"><i></i></span><div class="bd"><h3>Naslov događaja 1</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></div></li>
+<li><span class="yr">2008</span><span class="rail" aria-hidden="true"><i></i></span><div class="bd"><h3>Naslov događaja 2</h3><p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p></div></li>
+<li><span class="yr">2010</span><span class="rail" aria-hidden="true"><i></i></span><div class="bd"><h3>Naslov događaja 3</h3><p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p></div></li>
+<li><span class="yr">2013</span><span class="rail" aria-hidden="true"><i></i></span><div class="bd"><h3>Naslov događaja 4</h3><p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></div></li>
+<li><span class="yr">2016</span><span class="rail" aria-hidden="true"><i></i></span><div class="bd"><h3>Naslov događaja 5</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></div></li>
+<li><span class="yr">2019</span><span class="rail" aria-hidden="true"><i></i></span><div class="bd"><h3>Naslov događaja 6</h3><p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p></div></li>
+<li><span class="yr">2023</span><span class="rail" aria-hidden="true"><i></i></span><div class="bd"><h3>Naslov događaja 7</h3><p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p></div></li>
+<li><span class="yr">2026</span><span class="rail" aria-hidden="true"><i></i></span><div class="bd"><h3>Naslov događaja 8</h3><p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></div></li>
+</ol><div class="tl-nav" aria-label="Navigacija vremenske linije"><button type="button" class="tl-prev" aria-label="Prethodni događaj"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button><button type="button" class="tl-next" aria-label="Sledeći događaj"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button></div>
+</div></section>
+<section class="stack" aria-label="Brendovi">
+<article class="pn" id="suzuki"><div class="ph"><img src="assets/suzuki.webp" alt="SUZUKI" style="object-position:50% 58%" loading="lazy"></div><div class="tx"><span class="eyebrow">Putnička vozila</span><img class="wl" src="assets/suzuki-logo-bg.svg" alt="SUZUKI"><h2><b>Suzuki</b> automobili</h2><p>Sa ponosom izdvojimo da smo već dve decenije ovlašćeni uvoznik Suzuki automobila. Pored prodaje vozila, našim kupcima pružamo i kompletnu servisnu podršku, sa mogućnošću ostvarivanja garancije do 10 godina ili 200.000 km, u skladu sa uslovima garancije. Dugogodišnja saradnja temelji se na kvalitetu vozila ovog renomiranog japanskog brenda, poznatog po praktičnim i ekonomičnim automobilima. Pored SUV modela kao što su S Cross i Vitara, u našoj ponudi možete pronaći i kompaktni gradski atomobil poput Swifta. Uz navedene modele, u ponudi je i Suzuki Vitara sa bogatim paketom električne opreme koji donosi dodatnu udobnost, praktičnost i jednostavnost u svakodnevnoj vožnji.</p><div class="num" aria-hidden="true">01</div></div></article>
+<article class="pn" id="subaru"><div class="ph"><img src="assets/subaru.webp" alt="SUBARU" style="object-position:50% 62%" loading="lazy"></div><div class="tx"><span class="eyebrow">Putnička vozila</span><img class="wl" src="assets/subaru.svg" alt="SUBARU"><h2><b>Subaru</b> automobili</h2><p>Subaru je poznati japanski brend automobila, koji se odlikuje visokim kvalitetom, bezbednošću i naprednom tehnologijom. Većina modela je opremljena prepoznatljivim simetričnim pogonom na sva četiri točka (Symmetrical AWD) i bokser motorima, koji osiguravaju stabilnost i dobre vozne osobine na raznim terenima.</p><div class="num" aria-hidden="true">02</div></div></article>
+<article class="pn" id="loncin"><div class="ph"><img src="assets/loncin.webp" alt="LONCIN" style="object-position:50% 38%" loading="lazy"></div><div class="tx"><span class="eyebrow">Kvadovi</span><img class="wl" src="assets/Loncin.svg" alt="LONCIN"><h2><b>Loncin</b> kvadovi</h2><p>Loncin kvadove možete pronaći u okviru naše ponude, gde se nalaze modeli prilagođene različitim tipovima vožnje, od rekreativne i avantura vožnje po prirodi do upotrebe  na zahtevnijim terenima. Poznati su po praktičnosti, robusnoj konstrukciji i pristupačnijoj ceni, što ih čini zanimljivim izborom za različite korisnike. Dugogodišnja tradicija brenda Loncin predstavlja temelj njegovog kvaliteta, pouzdanosti i poverenja koje uživa među korisnicima.</p><div class="num" aria-hidden="true">03</div></div></article>
+<article class="pn" id="voge"><div class="ph"><img src="assets/voge.webp" alt="VOGE" style="object-position:62% 60%" loading="lazy"></div><div class="tx"><span class="eyebrow">Motori</span><img class="wl" src="assets/voge-motos-seeklogo.svg" alt="VOGE"><h2><b>Voge</b> motori</h2><p>U našoj ponudi motora možete pronaći VOGE brend kineskih motocikala. VOGE pripada kompaniji Loncin, jednom od poznatijih proizvođača motora i motociklističkih komponenti. Njihovi modeli odlikuju se modernim dizajnom, dobrom opremom i povoljnim odnosom cene i kvaliteta. VOGE nudi različite vrste motocikala, od sportskih i naked modela do touring i adventure motocikala.</p><div class="num" aria-hidden="true">04</div></div></article>
+<article class="pn" id="corelli"><div class="ph"><img src="assets/corelli.webp" alt="Corelli" style="object-position:70% 55%" loading="lazy"></div><div class="tx"><span class="eyebrow">Bicikli</span><img class="wl" src="assets/corelli.svg" alt="Corelli"><h2><b>Corelli</b> bicikli</h2><p>Sa ponosom možemo istaći da smo ekskluzivni uvoznici brenda Corelli koji u svojoj ponudi ima modele za različite stilove vožnje i za raličite uzraste. U ponudi imamo gradske, trekking, brdske i dečije bicikle, koji spajaju funkcionalnost, moderan dizajn i udobnost. Corelli bicikli su odličan izbor za svakodnevnu vožnju, rekreaciju i avanture na otvorenom.</p><div class="num" aria-hidden="true">05</div></div></article>
+</section>
 </main>
 <footer id="servis"><div class="wrap ft">
-<a target="_blank" rel="noopener" class="ft-brand" href="https://claude.ai/artifact/UpMQ9pMV4SUYrq4GaiHwUx" aria-label="Beta Motors Centar"><img src="assets/Beta_motors_centar_logo.svg" alt="Beta Motors Centar"></a>
-<nav class="fq" aria-label="Brzi linkovi"><h3>Brzi linkovi</h3><ul class="ft-links"><li><a href="https://claude.ai/artifact/AKaC4LUxcYCrfftzC5DzHy" target="_blank" rel="noopener">Suzuki</a></li><li><a href="https://claude.ai/artifact/UpMQ9pMV4SUYrq4GaiHwUx#subaru" target="_blank" rel="noopener">Subaru</a></li><li><a href="https://claude.ai/artifact/UpMQ9pMV4SUYrq4GaiHwUx#foton" target="_blank" rel="noopener">Foton</a></li><li><a href="https://claude.ai/artifact/UpMQ9pMV4SUYrq4GaiHwUx#loncin" target="_blank" rel="noopener">Loncin</a></li><li><a href="https://claude.ai/artifact/UpMQ9pMV4SUYrq4GaiHwUx#voge" target="_blank" rel="noopener">Voge</a></li><li><a href="https://claude.ai/artifact/UpMQ9pMV4SUYrq4GaiHwUx#corelli" target="_blank" rel="noopener">Corelli</a></li><li><a href="https://claude.ai/artifact/NnVMnFESgPuXyJsxCdUebw" target="_blank" rel="noopener">Servis</a></li></ul></nav>
+<a class="ft-brand" href="#top" aria-label="Beta Motors Centar"><img src="assets/Beta_motors_centar_logo.svg" alt="Beta Motors Centar"></a>
+<nav class="fq" aria-label="Brzi linkovi"><h3>Brzi linkovi</h3><ul class="ft-links"><li><a href="suzuki.html">Suzuki</a></li><li><a href="#subaru">Subaru</a></li><li><a href="#foton">Foton</a></li><li><a href="#loncin">Loncin</a></li><li><a href="#voge">Voge</a></li><li><a href="#corelli">Corelli</a></li><li><a href="servis.html">Servis</a></li></ul></nav>
 </div><div class="wrap ft-copy"><p>© Beta Motors Centar 2026</p></div></footer>
 <script>
 const dds=[...document.querySelectorAll('.has-dd')];const closeAll=()=>dds.forEach(x=>{x.classList.remove('open');x.querySelector('button').setAttribute('aria-expanded','false')});
@@ -183,6 +256,23 @@ nav.addEventListener('click',e=>{if(e.target.closest('a')){nav.classList.remove(
 
 
 
-</script>
 
-</body></html>
+const hd=document.querySelector('header');
+new IntersectionObserver(([e])=>hd.classList.toggle('scrolled',!e.isIntersecting)).observe(document.getElementById('sent'));
+const tio=new IntersectionObserver(es=>es.forEach(e=>e.target.classList.toggle('on',e.isIntersecting||e.boundingClientRect.top<0)),{rootMargin:'-38% 0px -38% 0px'});
+document.querySelectorAll('.tl li').forEach((li,i)=>{li.style.setProperty('--i',i);tio.observe(li)});
+(()=>{const tlo=document.querySelector('ol.tl'),P=document.querySelector('.tl-prev'),N=document.querySelector('.tl-next');if(!tlo||!P||!N)return;
+const reduce=matchMedia('(prefers-reduced-motion:reduce)');
+const step=d=>{const w=tlo.querySelector('li').getBoundingClientRect().width;tlo.scrollBy({left:d*w,behavior:reduce.matches?'auto':'smooth'})};
+const state=()=>{const max=tlo.scrollWidth-tlo.clientWidth-1;P.disabled=tlo.scrollLeft<=1;N.disabled=tlo.scrollLeft>=max};
+P.addEventListener('click',()=>step(-1));N.addEventListener('click',()=>step(1));
+tlo.addEventListener('scroll',state,{passive:true});window.addEventListener('resize',state);state();
+let dn=false,sx=0,sl=0,moved=false;
+tlo.addEventListener('pointerdown',e=>{if(e.pointerType!=='mouse'||e.button!==0)return;dn=true;moved=false;sx=e.clientX;sl=tlo.scrollLeft;tlo.classList.add('drag')});
+window.addEventListener('pointermove',e=>{if(!dn)return;const dx=e.clientX-sx;if(Math.abs(dx)>4)moved=true;tlo.scrollLeft=sl-dx});
+window.addEventListener('pointerup',()=>{if(!dn)return;dn=false;tlo.classList.remove('drag')});
+tlo.addEventListener('click',e=>{if(moved){e.preventDefault();e.stopPropagation();moved=false}},true);
+tlo.addEventListener('dragstart',e=>e.preventDefault());
+})();
+
+</script>
