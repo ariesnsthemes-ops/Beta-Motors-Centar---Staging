@@ -18,14 +18,14 @@ header{position:sticky;top:env(safe-area-inset-top,0px);z-index:100;background:c
 .brand img{height:15px;width:auto;transition:transform .5s var(--ease)}.brand:hover img{transform:translateX(3px)}
 nav ul{list-style:none;display:flex;gap:8px;align-items:center}
 nav button,nav a.plain{position:relative;font:500 15px/1 var(--body);color:var(--ink);background:none;border:0;padding:14px 12px;cursor:pointer;display:inline-flex;align-items:center;gap:6px}
-nav button::after,nav a.plain::after{content:"";position:absolute;left:12px;right:12px;bottom:6px;height:2px;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .5s var(--ease)}
+nav button::after,nav a.plain::after{content:"";position:absolute;left:12px;right:12px;bottom:6px;height:2px;background:var(--accent);transform:scaleX(0);transform-origin:left;}
 nav button:hover::after,nav a.plain:hover::after,.has-dd.open>button::after{transform:scaleX(1)}
 nav :focus-visible,.marquee a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 .has-dd{position:relative}.has-dd svg{width:11px;height:11px;transition:transform .3s var(--ease)}.has-dd.open svg{transform:rotate(180deg)}
 .dd{position:absolute;top:100%;left:0;min-width:190px;background:var(--bg);border:1px solid var(--line);border-top:2px solid var(--accent);padding:6px 0;opacity:0;visibility:hidden;transform:translateY(-6px);transition:opacity .3s var(--ease),transform .3s var(--ease),visibility .3s}
 .has-dd:nth-last-child(-n+3) .dd{left:auto;right:0}
 .has-dd:hover .dd,.has-dd.open .dd,.has-dd:focus-within .dd{opacity:1;visibility:visible;transform:none}
-.dd a{display:block;padding:13px 20px;font-weight:500;transition:background .3s,padding-left .3s var(--ease),color .3s}
+.dd a{display:block;padding:4px 20px;font-weight:500;transition:background .3s,padding-left .3s var(--ease),color .3s}
 .dd a:hover{background:var(--accent);color:var(--on-accent);padding-left:28px}
 .burger{display:none;width:48px;height:48px;border:0;background:none;cursor:pointer;align-items:center;justify-content:center}
 .burger span,.burger span::before,.burger span::after{display:block;width:22px;height:1.5px;background:var(--ink);position:relative;transition:.3s var(--ease)}
@@ -52,7 +52,7 @@ nav :focus-visible,.marquee a:focus-visible{outline:2px solid var(--accent);outl
 .eyebrow::after{content:"";width:40px;height:1.5px;background:currentColor;transition:width .6s var(--ease)}
 .pn:hover .eyebrow::after{width:88px}
 .tx .wl{height:auto;max-height:46px;width:auto;max-width:150px;object-fit:contain;object-position:left center}
-.tx h2{font:800 clamp(26px,2.7vw,40px)/1.05 var(--display);font-stretch:108%;letter-spacing:-.03em}
+.tx h2{color:#232323;font:800 clamp(26px,2.7vw,40px)/1.05 var(--display);font-stretch:108%;letter-spacing:-.03em}
 .tx h2 b{font-weight:900;color:var(--accent)}
 .tx p{font-size:clamp(15px,1.1vw,17px);line-height:1.75;color:var(--muted);max-width:56ch}
 .num{font:900 clamp(72px,10vw,160px)/.8 var(--display);font-stretch:112%;letter-spacing:-.05em;color:var(--line);margin-top:8px;user-select:none}
@@ -79,8 +79,8 @@ footer{padding:clamp(44px,5vw,72px) 0 32px;background:var(--accent);color:var(--
 .ft-menu h3::after{content:"";width:22px;height:1.5px;background:currentColor;opacity:.6}
 .ft-menu li h3 a:hover{text-decoration:underline;text-underline-offset:4px}
 .ft-menu ul{list-style:none;display:grid;gap:4px}
-.ft-menu li a{position:relative;display:inline-block;padding:6px 0;font:500 17px/1.2 var(--body);transition:transform .5s var(--ease)}
-.ft-menu li a::after{content:"";position:absolute;left:0;right:0;bottom:2px;height:1.5px;background:currentColor;transform:scaleX(0);transform-origin:left;transition:transform .5s var(--ease)}
+.ft-menu li a{position:relative;display:inline-block;padding:6px 0;font:500 17px/1.2 var(--body);}
+.ft-menu li a::after{content:"";position:absolute;left:0;right:0;bottom:2px;height:1.5px;background:currentColor;transform:scaleX(0);transform-origin:left;}
 .ft-menu li a:hover{transform:translateX(6px)}.ft-menu li a:hover::after{transform:scaleX(1)}
 .ft-menu li h3 a{padding:0;font:inherit;display:inline}.ft-menu li h3 a::after{display:none}.ft-menu li h3 a:hover{transform:none}
 .ft-menu a:focus-visible{outline:2px solid var(--on-accent);outline-offset:3px}
@@ -101,7 +101,7 @@ footer{padding:clamp(44px,5vw,72px) 0 32px;background:var(--accent);color:var(--
 /* nav v2: pill hover, dot for current page, floating dropdown with brand logos */
 nav ul{gap:2px}
 nav button,nav a.plain{padding:11px 14px;border-radius:999px;transition:background .3s var(--ease),color .3s}
-nav button:hover,nav a.plain:hover,.has-dd.open>button{background:oklch(95% .012 235)}
+nav button:hover,nav a.plain:hover,.has-dd.open>button{background:none;color:oklch(12% .03 240)}
 nav button::after,nav a.plain::after{left:50%;right:auto;bottom:3px;width:4px;height:4px;margin-left:-2px;border-radius:50%;background:var(--accent);transform:scale(0);transition:transform .4s var(--ease)}
 nav button:hover::after,nav a.plain:hover::after,.has-dd.open>button::after{transform:scale(0)}
 .has-dd.cur>button::after,nav a.plain[aria-current]::after{transform:scale(1)}
@@ -109,13 +109,13 @@ nav button:hover::after,nav a.plain:hover::after,.has-dd.open>button::after{tran
 .dd::before{content:"";position:absolute;left:0;right:0;bottom:100%;height:16px}
 .has-dd:nth-last-child(-n+3) .dd{left:auto;right:-6px;transform-origin:top right}
 .has-dd:hover .dd,.has-dd.open .dd,.has-dd:focus-within .dd{transform:none}
-.dd a{display:grid;grid-template-columns:1fr auto;align-items:center;gap:14px;padding:14px 16px;border-radius:10px;font:600 16px/1.2 var(--body);color:var(--ink);background:none;opacity:0;transform:translateY(6px);transition:opacity .2s,transform .2s,background .25s}
+.dd a{display:grid;grid-template-columns:1fr auto;align-items:center;gap:14px;padding:0 16px;min-height:0;border-radius:10px;font:600 16px/1.2 var(--body);color:var(--ink);background:none;opacity:0;transform:translateY(6px);transition:opacity .2s,transform .2s,background .25s}
 .has-dd:hover .dd a,.has-dd.open .dd a,.has-dd:focus-within .dd a{opacity:1;transform:none;transition:opacity .5s var(--ease) calc(var(--i,0)*50ms),transform .5s var(--ease) calc(var(--i,0)*50ms),background .25s}
 .dd a:hover,.dd a:focus-visible,.dd a[aria-current]{background:oklch(95% .012 235);color:var(--ink);padding-left:16px}
 .has-dd .dd svg.ar{width:16px;height:16px;opacity:0;transform:translateX(-6px);transition:opacity .3s,transform .5s var(--ease);color:var(--accent)}
 .has-dd.open .dd a:hover svg.ar,.has-dd .dd a:hover svg.ar,.dd a:focus-visible svg.ar{opacity:1;transform:none}
 @media(max-width:900px){
- nav button,nav a.plain{border-radius:0}nav button:hover,nav a.plain:hover,.has-dd.open>button{background:none}
+ nav button,nav a.plain{border-radius:0}nav button:hover,nav a.plain:hover,.has-dd.open>button{background:none;color:oklch(12% .03 240)}
  .dd{top:auto;left:auto!important;right:auto!important;min-width:0;border:0;border-radius:0;box-shadow:none;background:none;padding:2px 0 10px;opacity:1;visibility:visible;transform:none}
  .dd::before{display:none}
  .dd a{opacity:1;transform:none;grid-template-columns:1fr;padding:10px 0 10px 14px;transition:none}.dd a:hover,.dd a[aria-current]{background:none;padding:10px 0 10px 14px}.dd a[aria-current] span:last-of-type{color:var(--accent)}
@@ -123,8 +123,8 @@ nav button:hover::after,nav a.plain:hover::after,.has-dd.open>button::after{tran
 }
 /* dropdown v3: quiet text rows */
 .dd{min-width:196px;padding:6px;border-radius:14px}
-.dd a{grid-template-columns:1fr;padding:10px 14px;font:500 15px/1.3 var(--body);color:var(--ink)}
-.dd a:hover,.dd a:focus-visible,.dd a[aria-current]{background:none;padding:10px 14px;color:var(--accent)}
+.dd a{grid-template-columns:1fr;padding:4px 14px;font:500 15px/1.3 var(--body);color:var(--ink)}
+.dd a:hover,.dd a:focus-visible,.dd a[aria-current]{background:none;padding:4px 14px;color:var(--accent)}
 .dd a:focus-visible{outline:2px solid var(--accent);outline-offset:-2px;border-radius:8px}
 @media(max-width:900px){.dd a,.dd a:hover,.dd a[aria-current]{padding:10px 0 10px 14px;font-size:16px}}
 /* dropdown underline */
@@ -191,15 +191,23 @@ ol.tl{display:flex;overflow-x:auto;overscroll-behavior-x:contain;padding:8px 4px
 .fq{display:flex;flex-direction:column;gap:26px}
 .fq h3{font:600 12px/1 var(--body);letter-spacing:.16em;text-transform:uppercase;color:oklch(80% .04 235);display:flex;align-items:center;gap:12px}
 .fq h3::after{content:"";width:40px;height:1.5px;background:currentColor;opacity:.6}
-.ft-links{list-style:none;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 24px}
-.ft-links a{position:relative;display:inline-block;padding:4px 0;font:500 clamp(15px,1.2vw,17px)/1.2 var(--display);font-stretch:104%;letter-spacing:-.01em;transition:transform .5s var(--ease)}
-.ft-links a::after{content:"";position:absolute;left:0;right:0;bottom:6px;height:1.5px;background:currentColor;transform:scaleX(0);transform-origin:left;transition:transform .5s var(--ease)}
-.ft-links a:hover{transform:translateX(6px)}.ft-links a:hover::after{transform:scaleX(1)}
+.ft-links{list-style:none;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 12px}
+.ft-links a{position:relative;display:inline-block;padding:4px 0;font:400 clamp(15px,1.2vw,17px)/1.2 var(--display);font-stretch:104%;letter-spacing:-.01em;}
+
+.ft-links a:hover{color:#fff}
 .ft-links a:focus-visible{outline:2px solid var(--on-accent);outline-offset:4px}
-@media(min-width:900px){.ft-links{grid-template-columns:repeat(3,minmax(0,1fr));gap:0 40px}}
+@media(min-width:900px){.ft-links{grid-template-columns:repeat(3,minmax(0,1fr));gap:0 16px}}
 /* footer copyright */
 .ft-copy{margin-top:clamp(48px,6vw,72px);padding-top:22px;border-top:1px solid oklch(100% 0 0/.14)}
 .ft-copy p{font:500 13px/1.4 var(--body);letter-spacing:.02em;color:oklch(80% .04 235)}
+.tx h2 b,.title h2 b,.title h1 b{color:#232323}.tx h2,.title h2,.title h1{color:#232323}
+/* timeline v2 */
+.tl .rail::after{display:none}
+.tl li{opacity:0;transform:translateY(18px);transition:opacity .9s var(--ease),transform .9s var(--ease);transition-delay:calc(var(--i,0)*110ms)}
+.tl li.on{opacity:1;transform:none}
+@media(min-width:900px){ol.tl{-webkit-mask-image:linear-gradient(90deg,#000 0,#000 calc(100% - 56px),transparent 100%);mask-image:linear-gradient(90deg,#000 0,#000 calc(100% - 56px),transparent 100%)}}
+@media(prefers-reduced-motion:reduce){.tl li{opacity:1;transform:none;transition:none}}
+.tx h2 b,.title h1 b,.title h2 b{font-weight:800}
 </style>
 <header><div class="wrap bar">
 <a class="brand" href="#top" aria-label="Beta Motors Centar"><img src="assets/Beta_motors_centar_logo.svg" alt="Beta Motors Centar"></a>
@@ -225,10 +233,10 @@ ol.tl{display:flex;overflow-x:auto;overscroll-behavior-x:contain;padding:8px 4px
 </ol><div class="tl-nav" aria-label="Navigacija vremenske linije"><button type="button" class="tl-prev" aria-label="Prethodni događaj"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button><button type="button" class="tl-next" aria-label="Sledeći događaj"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button></div>
 </div></section>
 <section class="stack" aria-label="Brendovi">
-<article class="pn" id="suzuki"><div class="ph"><img src="assets/suzuki.webp" alt="SUZUKI" style="object-position:50% 58%" loading="lazy"></div><div class="tx"><span class="eyebrow">Putnička vozila</span><img class="wl" src="assets/suzuki-logo-bg.svg" alt="SUZUKI"><h2><b>SUZUKI</b> automobili</h2><p>Sa ponosom izdvojimo da smo već dve decenije ovlašćeni uvoznik Suzuki automobila. Pored prodaje vozila, našim kupcima pružamo i kompletnu servisnu podršku, sa mogućnošću ostvarivanja garancije do 10 godina ili 200.000 km, u skladu sa uslovima garancije. Dugogodišnja saradnja temelji se na kvalitetu vozila ovog renomiranog japanskog brenda, poznatog po praktičnim i ekonomičnim automobilima. Pored SUV modela kao što su S Cross i Vitara, u našoj ponudi možete pronaći i kompaktni gradski atomobil poput Swifta. Uz navedene modele, u ponudi je i Suzuki Vitara sa bogatim paketom električne opreme koji donosi dodatnu udobnost, praktičnost i jednostavnost u svakodnevnoj vožnji.</p><div class="num" aria-hidden="true">01</div></div></article>
-<article class="pn" id="subaru"><div class="ph"><img src="assets/subaru.webp" alt="SUBARU" style="object-position:50% 62%" loading="lazy"></div><div class="tx"><span class="eyebrow">Putnička vozila</span><img class="wl" src="assets/subaru.svg" alt="SUBARU"><h2><b>SUBARU</b> automobili</h2><p>Subaru je poznati japanski brend automobila, koji se odlikuje visokim kvalitetom, bezbednošću i naprednom tehnologijom. Većina modela je opremljena prepoznatljivim simetričnim pogonom na sva četiri točka (Symmetrical AWD) i bokser motorima, koji osiguravaju stabilnost i dobre vozne osobine na raznim terenima.</p><div class="num" aria-hidden="true">02</div></div></article>
-<article class="pn" id="loncin"><div class="ph"><img src="assets/loncin.webp" alt="LONCIN" style="object-position:50% 38%" loading="lazy"></div><div class="tx"><span class="eyebrow">Kvadovi</span><img class="wl" src="assets/Loncin.svg" alt="LONCIN"><h2><b>LONCIN</b> kvadovi</h2><p>Loncin kvadove možete pronaći u okviru naše ponude, gde se nalaze modeli prilagođene različitim tipovima vožnje, od rekreativne i avantura vožnje po prirodi do upotrebe  na zahtevnijim terenima. Poznati su po praktičnosti, robusnoj konstrukciji i pristupačnijoj ceni, što ih čini zanimljivim izborom za različite korisnike. Dugogodišnja tradicija brenda Loncin predstavlja temelj njegovog kvaliteta, pouzdanosti i poverenja koje uživa među korisnicima.</p><div class="num" aria-hidden="true">03</div></div></article>
-<article class="pn" id="voge"><div class="ph"><img src="assets/voge.webp" alt="VOGE" style="object-position:62% 60%" loading="lazy"></div><div class="tx"><span class="eyebrow">Motori</span><img class="wl" src="assets/voge-motos-seeklogo.svg" alt="VOGE"><h2><b>VOGE</b> motori</h2><p>U našoj ponudi motora možete pronaći VOGE brend kineskih motocikala. VOGE pripada kompaniji Loncin, jednom od poznatijih proizvođača motora i motociklističkih komponenti. Njihovi modeli odlikuju se modernim dizajnom, dobrom opremom i povoljnim odnosom cene i kvaliteta. VOGE nudi različite vrste motocikala, od sportskih i naked modela do touring i adventure motocikala.</p><div class="num" aria-hidden="true">04</div></div></article>
+<article class="pn" id="suzuki"><div class="ph"><img src="assets/suzuki.webp" alt="SUZUKI" style="object-position:50% 58%" loading="lazy"></div><div class="tx"><span class="eyebrow">Putnička vozila</span><img class="wl" src="assets/suzuki-logo-bg.svg" alt="SUZUKI"><h2><b>Suzuki</b> automobili</h2><p>Sa ponosom izdvojimo da smo već dve decenije ovlašćeni uvoznik Suzuki automobila. Pored prodaje vozila, našim kupcima pružamo i kompletnu servisnu podršku, sa mogućnošću ostvarivanja garancije do 10 godina ili 200.000 km, u skladu sa uslovima garancije. Dugogodišnja saradnja temelji se na kvalitetu vozila ovog renomiranog japanskog brenda, poznatog po praktičnim i ekonomičnim automobilima. Pored SUV modela kao što su S Cross i Vitara, u našoj ponudi možete pronaći i kompaktni gradski atomobil poput Swifta. Uz navedene modele, u ponudi je i Suzuki Vitara sa bogatim paketom električne opreme koji donosi dodatnu udobnost, praktičnost i jednostavnost u svakodnevnoj vožnji.</p><div class="num" aria-hidden="true">01</div></div></article>
+<article class="pn" id="subaru"><div class="ph"><img src="assets/subaru.webp" alt="SUBARU" style="object-position:50% 62%" loading="lazy"></div><div class="tx"><span class="eyebrow">Putnička vozila</span><img class="wl" src="assets/subaru.svg" alt="SUBARU"><h2><b>Subaru</b> automobili</h2><p>Subaru je poznati japanski brend automobila, koji se odlikuje visokim kvalitetom, bezbednošću i naprednom tehnologijom. Većina modela je opremljena prepoznatljivim simetričnim pogonom na sva četiri točka (Symmetrical AWD) i bokser motorima, koji osiguravaju stabilnost i dobre vozne osobine na raznim terenima.</p><div class="num" aria-hidden="true">02</div></div></article>
+<article class="pn" id="loncin"><div class="ph"><img src="assets/loncin.webp" alt="LONCIN" style="object-position:50% 38%" loading="lazy"></div><div class="tx"><span class="eyebrow">Kvadovi</span><img class="wl" src="assets/Loncin.svg" alt="LONCIN"><h2><b>Loncin</b> kvadovi</h2><p>Loncin kvadove možete pronaći u okviru naše ponude, gde se nalaze modeli prilagođene različitim tipovima vožnje, od rekreativne i avantura vožnje po prirodi do upotrebe  na zahtevnijim terenima. Poznati su po praktičnosti, robusnoj konstrukciji i pristupačnijoj ceni, što ih čini zanimljivim izborom za različite korisnike. Dugogodišnja tradicija brenda Loncin predstavlja temelj njegovog kvaliteta, pouzdanosti i poverenja koje uživa među korisnicima.</p><div class="num" aria-hidden="true">03</div></div></article>
+<article class="pn" id="voge"><div class="ph"><img src="assets/voge.webp" alt="VOGE" style="object-position:62% 60%" loading="lazy"></div><div class="tx"><span class="eyebrow">Motori</span><img class="wl" src="assets/voge-motos-seeklogo.svg" alt="VOGE"><h2><b>Voge</b> motori</h2><p>U našoj ponudi motora možete pronaći VOGE brend kineskih motocikala. VOGE pripada kompaniji Loncin, jednom od poznatijih proizvođača motora i motociklističkih komponenti. Njihovi modeli odlikuju se modernim dizajnom, dobrom opremom i povoljnim odnosom cene i kvaliteta. VOGE nudi različite vrste motocikala, od sportskih i naked modela do touring i adventure motocikala.</p><div class="num" aria-hidden="true">04</div></div></article>
 <article class="pn" id="corelli"><div class="ph"><img src="assets/corelli.webp" alt="Corelli" style="object-position:70% 55%" loading="lazy"></div><div class="tx"><span class="eyebrow">Bicikli</span><img class="wl" src="assets/corelli.svg" alt="Corelli"><h2><b>Corelli</b> bicikli</h2><p>Sa ponosom možemo istaći da smo ekskluzivni uvoznici brenda Corelli koji u svojoj ponudi ima modele za različite stilove vožnje i za raličite uzraste. U ponudi imamo gradske, trekking, brdske i dečije bicikle, koji spajaju funkcionalnost, moderan dizajn i udobnost. Corelli bicikli su odličan izbor za svakodnevnu vožnju, rekreaciju i avanture na otvorenom.</p><div class="num" aria-hidden="true">05</div></div></article>
 </section>
 </main>
@@ -251,7 +259,7 @@ nav.addEventListener('click',e=>{if(e.target.closest('a')){nav.classList.remove(
 const hd=document.querySelector('header');
 new IntersectionObserver(([e])=>hd.classList.toggle('scrolled',!e.isIntersecting)).observe(document.getElementById('sent'));
 const tio=new IntersectionObserver(es=>es.forEach(e=>e.target.classList.toggle('on',e.isIntersecting||e.boundingClientRect.top<0)),{rootMargin:'-38% 0px -38% 0px'});
-document.querySelectorAll('.tl li').forEach(li=>tio.observe(li));
+document.querySelectorAll('.tl li').forEach((li,i)=>{li.style.setProperty('--i',i);tio.observe(li)});
 (()=>{const tlo=document.querySelector('ol.tl'),P=document.querySelector('.tl-prev'),N=document.querySelector('.tl-next');if(!tlo||!P||!N)return;
 const reduce=matchMedia('(prefers-reduced-motion:reduce)');
 const step=d=>{const w=tlo.querySelector('li').getBoundingClientRect().width;tlo.scrollBy({left:d*w,behavior:reduce.matches?'auto':'smooth'})};
