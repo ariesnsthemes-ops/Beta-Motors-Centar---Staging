@@ -12,9 +12,9 @@ html{overflow-x:clip;scroll-behavior:smooth;scroll-padding-top:88px}
 body{font-family:var(--body);background:var(--bg);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:clip}
 img{display:block;max-width:100%}a{color:inherit;text-decoration:none}
 .wrap{max-width:1440px;margin:0 auto;padding-left:max(24px,env(safe-area-inset-left,0px));padding-right:max(24px,env(safe-area-inset-right,0px))}
-header{position:sticky;top:env(safe-area-inset-top,0px);z-index:100;background:var(--bg);border-bottom:1px solid var(--line)}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:100;background:color-mix(in oklch,var(--bg) 86%,transparent);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
 .bar{display:flex;align-items:center;justify-content:space-between;height:84px;gap:16px}
-.brand img{height:22px;width:auto;transition:transform .5s var(--ease)}
+.brand img{height:18px;width:auto;transition:transform .5s var(--ease)}
 nav ul{list-style:none;display:flex;gap:8px;align-items:center}
 nav button,nav a.plain{position:relative;font:600 15px/1 var(--body);color:var(--ink);background:none;border:0;padding:14px 12px;cursor:pointer;display:inline-flex;align-items:center;gap:6px}
 nav button::after,nav a.plain::after{content:"";position:absolute;left:12px;right:12px;bottom:6px;height:2px;background:var(--accent);transform:scaleX(0);transform-origin:left;}

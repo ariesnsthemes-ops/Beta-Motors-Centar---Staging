@@ -134,7 +134,8 @@ html{scroll-padding-top:68px}
 header{position:fixed;top:0;left:0;right:0;background:transparent;backdrop-filter:none;-webkit-backdrop-filter:none;border-bottom:1px solid transparent;transition:background .4s var(--ease),border-color .4s,backdrop-filter .4s}
 .bar{height:84px;transition:height .45s var(--ease)}
 .brand img{transition:transform .5s var(--ease),height .45s var(--ease)}
-header.scrolled{background:transparent;border-bottom-color:var(--line)}
+header.scrolled{background:color-mix(in oklch,var(--bg) 88%,transparent);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom-color:var(--line)}
+header.scrolled .brand img{height:18px}
 
 
 #sent{position:absolute;top:0;left:0;width:1px;height:24px;pointer-events:none}
