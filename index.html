@@ -245,7 +245,7 @@ ol.tl{display:flex;overflow-x:auto;overscroll-behavior-x:contain;padding:8px 4px
 .hero-full img{display:block;width:100%;height:auto;animation:fade 1s var(--ease) both}
 @media(min-width:900px){
 .hero{padding-top:0!important}
-.hero-full{aspect-ratio:16/9;max-height:100dvh}
+.hero-full{width:100%;height:min(56.25vw,100dvh)}
 .hero-full img{height:100%;object-fit:cover;object-position:50% 0}
 .hero-full::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(to bottom,oklch(14% .03 240/.68) 0,oklch(14% .03 240/.42) 140px,oklch(14% .03 240/.1) 45%,oklch(14% .03 240/.18) 100%);pointer-events:none}
 /* header over hero: white logo + menu until the page is scrolled */
